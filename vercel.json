@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Fantasma do Ads _ Ferramenta de Camuflagem.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/Fantasma do Ads _ Ferramenta de Camuflagem.html"
+    }
+  ]
+}
