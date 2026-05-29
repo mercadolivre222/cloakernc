@@ -14391,16 +14391,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   let w = l(v, h);
                   (s.add(w),
                     e.candidateRuleMap.has(w) || e.candidateRuleMap.set(w, []),
-                    e.candidateRuleMap
-                      .get(w)
-                      .push([
-                        {
-                          sort: n.create("components"),
-                          layer: "components",
-                          options: h,
-                        },
-                        y,
-                      ]));
+                    e.candidateRuleMap.get(w).push([
+                      {
+                        sort: n.create("components"),
+                        layer: "components",
+                        options: h,
+                      },
+                      y,
+                    ]));
                 }
               },
               addUtilities(p, h) {
@@ -14417,16 +14415,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   let w = l(v, h);
                   (s.add(w),
                     e.candidateRuleMap.has(w) || e.candidateRuleMap.set(w, []),
-                    e.candidateRuleMap
-                      .get(w)
-                      .push([
-                        {
-                          sort: n.create("utilities"),
-                          layer: "utilities",
-                          options: h,
-                        },
-                        y,
-                      ]));
+                    e.candidateRuleMap.get(w).push([
+                      {
+                        sort: n.create("utilities"),
+                        layer: "utilities",
+                        options: h,
+                      },
+                      y,
+                    ]));
                 }
               },
               matchUtilities: function (p, h) {
@@ -24926,11 +24922,13 @@ Check your Browserslist config to be sure that your targets are set up correctly
       /* Custom slider styling for the neon look */
       input[type="range"] {
         -webkit-appearance: none;
+        appearance: none;
         background: transparent;
       }
 
       input[type="range"]::-webkit-slider-thumb {
         -webkit-appearance: none;
+        appearance: none;
         height: 20px;
         width: 20px;
         border-radius: 50%;
@@ -25668,9 +25666,10 @@ Check your Browserslist config to be sure that your targets are set up correctly
                               required: true,
                               placeholder: "FNTM-XXXX-XXXX-XXXX",
                               value: activationKey,
-                              onChange: e => setActivationKey(e.target.value),]
-                  className: "w-full bg-dark-bg border border-dark-border rounded px-3 py-2 text-xs font-mono text-center text-white focus:border-neon focus:ring-1 focus:ring-neon outline-none uppercase transition-all"
-                        }),
+                              onChange: (e) => setActivationKey(e.target.value),
+                              className:
+                                "w-full bg-dark-bg border border-dark-border rounded px-3 py-2 text-xs font-mono text-center text-white focus:border-neon focus:ring-1 focus:ring-neon outline-none uppercase transition-all",
+                            }),
                         activateError && u.jsxs("div", {
                           className: "text-red-400 text-[10px] bg-red-400/10 p-2 rounded flex items-center gap-1.5 font-mono", children: [
                             u.jsx(br, { size: 12, className: "shrink-0" }), activateError
@@ -26035,7 +26034,7 @@ Check your Browserslist config to be sure that your targets are set up correctly
         --tw-contain-size: ;
         --tw-contain-layout: ;
         --tw-contain-paint: ;
-        --tw-contain-style: 
+        --tw-contain-style:   
     ;
       }
 
@@ -26090,7 +26089,7 @@ Check your Browserslist config to be sure that your targets are set up correctly
         --tw-contain-size: ;
         --tw-contain-layout: ;
         --tw-contain-paint: ;
-        --tw-contain-style: 
+        --tw-contain-style:   
     ;
       }
 
@@ -26230,6 +26229,7 @@ Check your Browserslist config to be sure that your targets are set up correctly
       input:where([type="reset"]),
       input:where([type="submit"]) {
         -webkit-appearance: button;
+        appearance: button;
         background-color: transparent;
         background-image: none;
       }
@@ -26253,15 +26253,18 @@ Check your Browserslist config to be sure that your targets are set up correctly
 
       [type="search"] {
         -webkit-appearance: textfield;
+        appearance: textfield;
         outline-offset: -2px;
       }
 
       ::-webkit-search-decoration {
         -webkit-appearance: none;
+        appearance: none;
       }
 
       ::-webkit-file-upload-button {
         -webkit-appearance: button;
+        appearance: button;
         font: inherit;
       }
 
@@ -26334,7 +26337,6 @@ Check your Browserslist config to be sure that your targets are set up correctly
       svg,
       video {
         display: block;
-        vertical-align: middle;
       }
 
       img,
@@ -26778,7 +26780,7 @@ Check your Browserslist config to be sure that your targets are set up correctly
 
       .font-mono {
         font-family:
-          'JetBrains Mono',
+          "JetBrains Mono",
           ui-monospace,
           SFMono-Regular,
           Menlo,
@@ -26791,8 +26793,7 @@ Check your Browserslist config to be sure that your targets are set up correctly
 
       .font-sans {
         font-family:
-          'Outfit',
-          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Outfit", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
           "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
       }
 
